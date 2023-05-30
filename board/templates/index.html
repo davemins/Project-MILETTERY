@@ -20,16 +20,16 @@
 
 <ul>
     {% if user.is_authenticated %}
-        <li>{{ user.username|escape }}로 로그인됨.</li>
-        <li>
-            <a href="{% url 'logout' %}">로그아웃</a>
-        </li>
+    <li>{{ user.username|escape }}로 로그인됨.</li>
+    <li>
+        <a href="{% url 'logout' %}">로그아웃</a>
+    </li>
     {% else %}
-        <div>
-            <a href="{% url 'login' %}">로그인</a>
-            &nbsp;/&nbsp;
-            <a href="{% url 'register' %}">회원가입</a>
-        </div>
+    <div>
+        <a href="{% url 'login' %}">로그인</a>
+        &nbsp;/&nbsp;
+        <a href="{% url 'register' %}">회원가입</a>
+    </div>
     {% endif %}
 </ul>
 {% endblock %}
